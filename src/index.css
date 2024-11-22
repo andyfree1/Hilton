@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Whitney';
+    src: local('Whitney'),
+         url('https://db.onlinewebfonts.com/t/0de1b3ef71eeae549881f6b4533c7f49.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  body {
+    font-family: 'Whitney', system-ui, -apple-system, sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: Georgia, 'Walbaum BQ Medium', serif;
+  }
+}
+
+/* Hilton brand colors */
+:root {
+  --hilton-blue: #002C51;
+  --hilton-black: #000000;
+  --hilton-white: #FFFFFF;
+}
+
+/* Typography classes */
+.hilton-heading {
+  font-family: Georgia, 'Walbaum BQ Medium', serif;
+  letter-spacing: -0.02em;
+}
+
+.hilton-text {
+  font-family: 'Whitney', system-ui, -apple-system, sans-serif;
+}
+
+/* Component styles */
+.hilton-card {
+  @apply bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden;
+}
+
+.hilton-button {
+  @apply px-4 py-2 rounded-md font-medium transition-colors duration-200;
+}
+
+.hilton-button-primary {
+  @apply hilton-button bg-[#002C51] text-white hover:bg-[#003666] focus:ring-2 focus:ring-offset-2 focus:ring-[#002C51];
+}
+
+.hilton-button-secondary {
+  @apply hilton-button border border-[#002C51] text-[#002C51] hover:bg-[#002C51] hover:text-white;
+}
+
+/* Logo styles */
+.hilton-logo {
+  height: 48px;
+  width: auto;
+}
